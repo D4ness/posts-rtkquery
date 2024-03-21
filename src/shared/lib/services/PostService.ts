@@ -8,11 +8,12 @@ export const postAPI = createApi({
         baseUrl: baseUrl,
     }),
     endpoints: (build) => ({
-        fetchPostList: build.query<IPost[], number>({
-            query: (limit: number = 5) => ({
+        fetchPostList: build.query<IPost[], {limit: number, start: number}>({
+            query: ({limit = 5, start = 0}) => ({
                 url: `/posts`,
                 params: {
-                    _limit: limit
+                    _limit: limit,
+                    _start: start
                 }
             })
         }),
