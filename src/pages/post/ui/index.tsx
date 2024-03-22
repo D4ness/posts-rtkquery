@@ -1,12 +1,11 @@
 import React from 'react';
 import {useParams} from "react-router-dom";
-import {postAPI} from "../../../shared/lib/services/PostService";
-import {Alert, Flex, Spin} from "antd";
-import {Post} from "../../../entities/post";
+import {postAPI} from '@/shared/lib/services/PostService';
+import {Alert, Flex, Spin} from 'antd';
+import {Post} from '@/entities/post';
 
 export const PostPage = () => {
     const {id} = useParams();
-    console.log(useParams())
     const {data, isLoading, error} = postAPI.useFetchPostByIdQuery(Number(id));
     return (
         <div>

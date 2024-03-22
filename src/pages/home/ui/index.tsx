@@ -1,9 +1,9 @@
-import {postAPI} from "../../../shared/lib/services/PostService";
-import {PostList} from "../../../widgets/postList";
-import {Alert, Flex, Spin} from "antd";
-import {useEffect, useState} from "react";
-import {IPost} from "../../../shared/lib/types/post";
-import {newSides, preparePosts} from "../lib/postsPreparing";
+import {postAPI} from '@/shared/lib/services/PostService';
+import {PostList} from '@/widgets/postList';
+import {Alert, Flex, Spin} from 'antd';
+import {useEffect, useState} from 'react';
+import {IPost} from '@/shared/lib/types/post';
+import {newSides, preparePosts} from '../lib/postsPreparing';
 
 export const HomePage = () => {
     const [isFetchingDown, setIsFetchingDown] = useState<boolean>(false);

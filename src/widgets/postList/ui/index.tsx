@@ -1,6 +1,6 @@
 import React from 'react';
-import {IPost} from "../../../shared/lib/types/post";
-import {PostCard} from "../../../entities/postCard";
+import {IPost} from '@/shared/lib/types/post';
+import {PostCard} from '@/entities/postCard';
 import './index.scss';
 
 interface IProps {

@@ -1,4 +1,4 @@
-import {IPost} from "../../../shared/lib/types/post";
+import {IPost} from '@/shared/lib/types/post';
 
 export const newSides = (sides: number[], flag: string) => {
     let prepSides = sides;

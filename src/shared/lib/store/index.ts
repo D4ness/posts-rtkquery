@@ -1,6 +1,6 @@
 import {configureStore} from '@reduxjs/toolkit';
 import {rootReducer} from '../reducers';
-import {postAPI} from "../services/PostService";
+import {postAPI} from '../services/PostService';
 
 export const setupStore = () => configureStore({
     reducer: rootReducer,
