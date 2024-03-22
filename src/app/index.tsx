@@ -6,7 +6,7 @@ import {Routing} from "../pages";
 function App () {
   return (
     <div className="App">
-       Smth...
+       <p>Здесь мог бы быть ваш Хэдэр...</p>
        <Routing />
     </div>
   )

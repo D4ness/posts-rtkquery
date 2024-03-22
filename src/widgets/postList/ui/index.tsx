@@ -1,22 +1,22 @@
 import React from 'react';
 import {IPost} from "../../../shared/lib/types/post";
-import {Post} from "../../../entities/post";
+import {PostCard} from "../../../entities/postCard";
 import './index.scss';
 
 interface IProps {
     posts: IPost[];
+    currentSides: number[];
 }
 
-export const PostList = ({posts}: IProps) => {
+export const PostList = ({posts, currentSides}: IProps) => {
     return (
         <div>
-            <div>Мб фильтры или что-то</div>
-            <div className='posts-container'>
+            <div className='posts__container'>
                 {posts?.map(post => (
-                    <Post post={post} key={post.id}/>
+                    <PostCard post={post} key={post.id}/>
                 ))}
             </div>
-            <div>Пагинация/infinite scroll</div>
+            { currentSides[1] < 100 && <p className="posts__loading">Идёт загрузка постов...</p>}
         </div>
     );
 };

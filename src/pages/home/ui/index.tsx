@@ -27,7 +27,7 @@ export const HomePage = () => {
         if (isFetchingUp) {
             setCurrentSides([...newSides(currentSides, 'up')])
             setCurrentPostStart(currentSides[0] - 6);
-            if (currentPostStart !== 0) {
+            if (currentSides[0] > 1) {
                 window.scrollTo(0, 55);
             }
             setIsFetchingUp(false)
@@ -69,17 +69,16 @@ export const HomePage = () => {
         }
     }, []);
 
-
     return (
         <section className="post-list" style={{height: "100%"}}>
-            Home
+            <b>Посты</b>
             <Flex justify="center" align="center" style={{height: "100%"}}>
                 {isLoading && <Spin size="large"/>}
                 {error && <Alert message="Произошла ошибка при загрузке постов" type="error"/>}
             </Flex>
             {posts.length !== 0 &&
                 <Flex justify="center" gap="middle">
-                    <PostList posts={posts}/>
+                    <PostList posts={posts} currentSides={currentSides} />
                 </Flex>
             }
         </section>
