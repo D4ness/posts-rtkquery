@@ -5,12 +5,14 @@ import {BrowserRouter} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import {setupStore} from './shared/lib/store';
 
-const store = setupStore();
 
+const basename = process.env.NODE_ENV === 'production' ? '/posts-rtkquery' : '/';
+
+const store = setupStore();
 const container: HTMLElement = document.getElementById("root")
 createRoot(container).render(
     <React.StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
             <Suspense fallback="Loading...">
                 {/*<ThemeProvider>*/}
                 <Provider store={store}>
