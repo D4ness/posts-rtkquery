@@ -8,7 +8,7 @@
     "start": "webpack serve --env port=3001",
     "build:prod": "webpack  --env mode=production",
     "build:dev": "webpack  --env mode=development",
-    "build": "webpack --env mode=production && mv build docs",
+    "build": "webpack --env mode=production",
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d build"
   },
