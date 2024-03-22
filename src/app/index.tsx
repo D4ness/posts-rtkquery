@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.scss'
-import {Routing} from '@/pages';
+import {Routing} from "@/pages";
+
 
 
 function App () {

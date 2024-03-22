@@ -1,7 +1,8 @@
 import React from 'react';
-import {IPost} from '@/shared/lib/types/post';
 import {Button, Card} from 'antd';
 import {Link} from 'react-router-dom';
+import {IPost} from '@/shared/lib/types/post';
+
 interface IProps {
     post: IPost;
 }
