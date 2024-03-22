@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://D4ness.github.io/posts-rtkquery",
   "scripts": {
     "start": "webpack serve --env port=3001",
     "build:prod": "webpack  --env mode=production",
     "build:dev": "webpack  --env mode=development",
-    "predeploy" : "npm run build:dev",
-    "deploy" : "gh-pages -d build:prod"
+    "build": "webpack --env mode=production && mv build docs",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
